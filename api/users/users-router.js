@@ -32,8 +32,9 @@ const User = require('./users-model');
       const users = await User.find()
       res.json(users)
 
-    } catch (err) {}
+    } catch (err) {
       next(err)
+    }
   })
 
 // Don't forget to add the router to the `exports` object so it can be required in other modules
